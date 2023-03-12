@@ -1,0 +1,26 @@
+{
+  "name": "yalogger",
+  "version": "0.0.0",
+  "description": "Yep, another logger",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "format": "prettier --write \"src/\""
+  },
+  "files": [
+    "/dist"
+  ],
+  "repository": "https://github.com/moon250/yalogger.git",
+  "author": {
+    "name": "moon250",
+    "email": "contact.moon250@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "colorette": "^2.0.19"
+  }
+}

@@ -1,0 +1,11 @@
+node_modules
+dist
+
+.idea
+.vscode
+.DS_STORE
+.tmp/
+
+yarn-error.log
+
+.prettiercache

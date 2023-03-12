@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Node16",
+
+    "target": "ES2022",
+    "lib": ["ESNext"],
+
+    // Emit
+    "declaration": true,
+    "sourceMap": true,
+    "strict": true,
+    "newLine": "lf",
+    "noEmitOnError": true,
+    "outDir": "./dist"
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
