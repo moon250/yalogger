@@ -4,6 +4,7 @@
   "description": "Yep, another logger",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
   "scripts": {
     "format": "prettier --write \"src/\"",
     "watch": "tsc --watch"

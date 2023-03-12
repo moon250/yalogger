@@ -12,6 +12,8 @@ import {
   white,
 } from "colorette";
 
+type Log = (...data: (string | object)[]) => void;
+
 type Level = {
   name: string;
   color: Color;
@@ -45,8 +47,6 @@ const getFormattedDate = function (): string {
 
   return formatted;
 };
-
-export type Log = (...data: (string | object)[]) => void;
 
 const success: Log = (...data) => {
   dataLog(data, {
@@ -103,10 +103,7 @@ const log: Log = (...data) => {
  *
  * Format : DATE | LEVEL - DATA
  */
-const dataLog = (
-  data: (string | object)[],
-  level: Level
-) => {
+const dataLog = (data: (string | object)[], level: Level) => {
   for (let fragment of data) {
     if (typeof fragment === "object") {
       fragment = JSON.stringify(fragment);
@@ -120,12 +117,14 @@ const dataLog = (
       levelName = bold(levelName);
     }
 
-    const message = gray(
-      `${getFormattedDate()} | ${levelName} - ${white(fragment)}`
-    );
+    let message = `${levelName} - ${white(fragment)}`;
 
-    console.log(message);
+    if (level.time === false) {
+      console.log(gray(message));
+    } else {
+      console.log(gray(`${getFormattedDate()} | ${message}`));
+    }
   }
 };
 
-export { success, info, warn, error, fatal, debug, log, dataLog };
+export { success, info, warn, error, fatal, debug, log, dataLog, Level, Log };
