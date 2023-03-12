@@ -1,5 +1,5 @@
 {
-  "name": "yalogger",
+  "name": "@moon250/yalogger",
   "version": "0.0.0",
   "description": "Yep, another logger",
   "main": "dist/index.js",

@@ -24,7 +24,7 @@ Note : Yalogger uses [colorette](https://www.npmjs.com/package/colorette) to mak
 ## Usage :
 
 ```js
-import { info, debug } from "yalogger"
+import { info, debug } from "@moon250/yalogger"
 
 // XXXX/XX/XX  XX:XX:XX.XX | INFO - Logging some infos
 info("Logging some infos")
@@ -38,7 +38,7 @@ debug({
 ## Creating custom levels :
 
 ```ts
-import { Log, dataLog } from "yalogger";
+import { Log, dataLog } from "@moon250/yalogger";
 import { black } from "colorette"
 
 const custom: Log = (...data) => {
