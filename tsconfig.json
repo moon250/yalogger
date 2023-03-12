@@ -1,10 +1,7 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
-    "moduleResolution": "Node16",
-
+    "moduleResolution": "Node",
     "target": "ES2022",
-    "lib": ["ESNext"],
 
     // Emit
     "declaration": true,
@@ -12,6 +9,8 @@
     "strict": true,
     "newLine": "lf",
     "noEmitOnError": true,
+
+    "rootDir": "src",
     "outDir": "./dist"
   },
   "include": [
