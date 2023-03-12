@@ -46,7 +46,7 @@ const custom: Log = (...data) => {
     name: "custom",
     color: black,
     bold: false, // Default value, not needed
-    time: false // Disabling t****ime display
+    time: false // Disabling time display
   })
 }
 
