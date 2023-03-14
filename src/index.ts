@@ -23,27 +23,17 @@ type Level = {
 
 const getFormattedDate = function (): string {
   const date = new Date();
-  const months = [
-    "01",
-    "02",
-    "03",
-    "04",
-    "05",
-    "06",
-    "07",
-    "08",
-    "09",
-    "10",
-    "11",
-    "12",
-  ];
   let formatted = "";
 
-  formatted += `${date.getFullYear()}/${months[date.getMonth()]}/${(
-    "0" + date.getDate()
-  ).slice(-2)}`;
+  formatted += `${date.getFullYear()}/${("0" + (date.getMonth() + 1)).slice(
+    -2
+  )}/${("0" + date.getDate()).slice(-2)}`;
   formatted += `  `;
-  formatted += `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}.${date.getMilliseconds()}`;
+  formatted += `${("0" + date.getHours()).slice(-2)}:${(
+    "0" + date.getMinutes()
+  ).slice(-2)}:${("0" + date.getSeconds()).slice(-2)}.${(
+    "00" + date.getMilliseconds()
+  ).slice(-3)}`;
 
   return formatted;
 };
